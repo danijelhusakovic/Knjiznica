@@ -1,0 +1,10 @@
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\bin\Debug\Knjiznica.exe
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\bin\Debug\Knjiznica.pdb
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.csproj.AssemblyReference.cache
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.Form1.resources
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.Properties.Resources.resources
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.csproj.GenerateResource.cache
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.csproj.CoreCompileInputs.cache
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.exe
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.pdb
+C:\Users\Danijel Husaković\Documents\repos\Knjiznica\obj\Debug\Knjiznica.Forme.Ucenici.resources
