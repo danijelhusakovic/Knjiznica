@@ -19,17 +19,22 @@ namespace Knjiznica
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Baza.Initialize();
             List<string> uceniciString = FileHandler.ReadAll("ucenici.txt");
-
-            List<Ucenik> ucenici = new List<Ucenik>();
 
             foreach(string ucenikString in uceniciString)
             {
                 Ucenik trenutni = Utility.StringToUcenik(ucenikString,'|');
-                ucenici.Add(trenutni);
+                Baza.Ucenici.Add(trenutni);
             }
 
-            foreach(Ucenik u in ucenici)
+            UpdateUcenici(Baza.Ucenici);
+        }
+
+        private void UpdateUcenici(List<Ucenik> ucenici)
+        {
+            lbUcenici.Items.Clear();
+            foreach (Ucenik u in ucenici)
             {
                 lbUcenici.Items.Add(u);
             }
@@ -37,7 +42,28 @@ namespace Knjiznica
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
+            DetaljiUcenika detaljiUcenika = new DetaljiUcenika();
+            detaljiUcenika.ShowDialog();
+        }
 
+        private void btnUredi_Click(object sender, EventArgs e)
+        {
+            if (lbUcenici.SelectedItem == null)
+            {
+                MessageBox.Show("Molimo odaberite ucenika");
+                return;
+            }
+            DetaljiUcenika detaljiUcenika = new DetaljiUcenika();
+            detaljiUcenika.ShowDialog();
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (lbUcenici.SelectedItem == null)
+            {
+                MessageBox.Show("Molimo odaberite ucenika");
+                return;
+            }
         }
     }
 }
