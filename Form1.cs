@@ -43,7 +43,18 @@ namespace Knjiznica
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             DetaljiUcenika detaljiUcenika = new DetaljiUcenika();
-            detaljiUcenika.ShowDialog();
+            DialogResult dialogResult = detaljiUcenika.ShowDialog();
+            switch(dialogResult)
+            {
+                case DialogResult.OK:
+                    MessageBox.Show("OK");
+                    break;
+                    case DialogResult.Cancel:
+                    MessageBox.Show("Cancel");
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void btnUredi_Click(object sender, EventArgs e)

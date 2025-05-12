@@ -16,5 +16,17 @@ namespace Knjiznica
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Dispose();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.DialogResult= DialogResult.OK;
+            this.Dispose();
+        }
     }
 }
