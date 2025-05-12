@@ -64,6 +64,7 @@ namespace Knjiznica
                 MessageBox.Show("Molimo odaberite ucenika");
                 return;
             }
+            // TODO: Obrisati ucenika
         }
     }
 }
