@@ -65,7 +65,12 @@ namespace Knjiznica
                 return;
             }
             DetaljiUcenika detaljiUcenika = new DetaljiUcenika();
+
+            Ucenik odabraniUcenik = lbUcenici.SelectedItem as Ucenik;
+
+            DetaljiUcenika.Ucenik = odabraniUcenik;
             detaljiUcenika.ShowDialog();
+            // TODO: Switch case ok i cancel
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)

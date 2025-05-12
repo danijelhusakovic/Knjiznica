@@ -12,6 +12,7 @@ namespace Knjiznica
 {
     public partial class DetaljiUcenika : Form
     {
+        public static Ucenik Ucenik;
         public DetaljiUcenika()
         {
             InitializeComponent();
@@ -27,6 +28,14 @@ namespace Knjiznica
         {
             this.DialogResult= DialogResult.OK;
             this.Dispose();
+        }
+
+        private void DetaljiUcenika_Load(object sender, EventArgs e)
+        {
+            tbOIB.Text = Ucenik.OIB;
+            tbIme.Text = Ucenik.Ime;
+            tbPrezime.Text = Ucenik.Prezime;
+            cbRazred.Text = Ucenik.Razred.ToString();
         }
     }
 }
