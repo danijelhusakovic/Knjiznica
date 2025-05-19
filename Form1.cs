@@ -73,10 +73,17 @@ namespace Knjiznica
             switch (dialogResult)
             {
                 case DialogResult.OK:
-                    MessageBox.Show("OK");
+                    foreach(Ucenik ucenik in Baza.Ucenici)
+                    {
+                        if (ucenik.OIB != DetaljiUcenika.Ucenik.OIB) continue;
+                        Ucenik izmijenjeniUcenik = DetaljiUcenika.Ucenik;
+                        ucenik.Ime = izmijenjeniUcenik.Ime;
+                        ucenik.Prezime = izmijenjeniUcenik.Prezime;
+                        ucenik.Razred = izmijenjeniUcenik.Razred;
+                        UpdateUcenici(Baza.Ucenici);
+                    }
                     break;
                 case DialogResult.Cancel:
-                    MessageBox.Show("Cancel");
                     break;
                 default:
                     break;

@@ -27,6 +27,10 @@ namespace Knjiznica
         private void btnOK_Click(object sender, EventArgs e)
         {
             this.DialogResult= DialogResult.OK;
+            Ucenik.OIB = tbOIB.Text;
+            Ucenik.Ime = tbIme.Text;
+            Ucenik.Prezime = tbPrezime.Text;
+            Ucenik.Razred = cbRazred.SelectedIndex;
             this.Dispose();
         }
 
