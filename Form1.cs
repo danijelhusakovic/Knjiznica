@@ -50,7 +50,7 @@ namespace Knjiznica
                     MessageBox.Show("OK");
                     break;
                     case DialogResult.Cancel:
-                    MessageBox.Show("Cancel");
+                    MessageBox.Show("OK");
                     break;
                 default:
                     break;
@@ -69,8 +69,18 @@ namespace Knjiznica
             Ucenik odabraniUcenik = lbUcenici.SelectedItem as Ucenik;
 
             DetaljiUcenika.Ucenik = odabraniUcenik;
-            detaljiUcenika.ShowDialog();
-            // TODO: Switch case ok i cancel
+            DialogResult dialogResult = detaljiUcenika.ShowDialog();
+            switch (dialogResult)
+            {
+                case DialogResult.OK:
+                    MessageBox.Show("OK");
+                    break;
+                case DialogResult.Cancel:
+                    MessageBox.Show("Cancel");
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
@@ -80,7 +90,8 @@ namespace Knjiznica
                 MessageBox.Show("Molimo odaberite ucenika");
                 return;
             }
-            // TODO: Obrisati ucenika
+            
+
         }
     }
 }

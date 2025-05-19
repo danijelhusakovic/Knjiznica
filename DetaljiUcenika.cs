@@ -32,6 +32,7 @@ namespace Knjiznica
 
         private void DetaljiUcenika_Load(object sender, EventArgs e)
         {
+            if (Ucenik == null) return;
             tbOIB.Text = Ucenik.OIB;
             tbIme.Text = Ucenik.Ime;
             tbPrezime.Text = Ucenik.Prezime;
